@@ -1,0 +1,29 @@
+h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+}
+h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+.centered {
+  /* width: 50%;
+  margin: 0 auto; */
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.tip {
+  position: fixed;
+  top: 40%;
+  left: 60%;
+  color: orange;
+}
+
+.title {
+  color: orangered;
+}
