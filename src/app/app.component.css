@@ -18,9 +18,10 @@ h2 {
 }
 
 .tip {
-  position: fixed;
-  top: 40%;
-  left: 60%;
+  position: absolute;
+  top: 30vh;
+  left: 60vw;
+  padding-right: 1rem;
   color: orange;
 }
 

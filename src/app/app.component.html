@@ -1,3 +1,5 @@
+<h1 class="centered title">{{ title }}</h1>
+<h2 *ngIf="paused" class="right tip">Tap on me again to make me move!</h2>
 <ng-lottie
   height="80vh"
   [options]="options"
@@ -5,5 +7,3 @@
   (click)="toggle()"
 >
 </ng-lottie>
-<h2 *ngIf="paused" class="right tip">Tap on me again to make me move!</h2>
-<h1 class="centered title">{{ title }}</h1>
