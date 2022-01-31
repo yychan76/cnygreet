@@ -7,7 +7,17 @@ import { AnimationOptions } from 'ngx-lottie';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Happy and Healthy Year of the Tiger!';
+  titles: string[] = [
+    '🍊🧧 Happy and Healthy Year of the Tiger! 🧧🍊',
+    '🍊🧧 If you are studying, wish you good grades 🎓! 🧧🍊',
+    '🍊🧧 If you are working, wish you earn big bucks 💵! 🧧🍊',
+    '🍊🧧 If you are retired, wish you stay fit 🏃🏻, sharp and healthy! 🧧🍊',
+    '🍊🧧 If you are a photographer, wish you capture inspiring 🌄 shots this year! 🧧🍊',
+    '🍊🧧 If you cook, wish you try delicious recipes 🥘 this year! 🧧🍊',
+    '🍊🧧 If you code, wish you have inspired ideas 💎 this year! 🧧🍊',
+  ];
+  title = this.titles[0];
+  titleCounter: number = 0;
   options: AnimationOptions = {
     path: 'assets/74268-cute-tiger.json',
   };
@@ -21,7 +31,15 @@ export class AppComponent {
     this.animationItem = animationItem;
   }
 
+  cycleTitle() {
+    this.titleCounter++;
+    this.titleCounter %= this.titles.length;
+    console.log(this.titleCounter);
+    this.title = this.titles[this.titleCounter];
+  }
+
   toggle(): void {
+    this.cycleTitle();
     this.ngZone.runOutsideAngular(() => {
       this.paused = !this.paused;
       if (this.paused) {
