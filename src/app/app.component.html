@@ -1,6 +1,7 @@
 <h1 class="centered title">{{ title }}</h1>
 <h2 *ngIf="paused" class="right tip">Tap on me again to make me move!</h2>
 <ng-lottie
+  class="lottie centered"
   height="80vh"
   [options]="options"
   (animationCreated)="animationCreated($event)"
